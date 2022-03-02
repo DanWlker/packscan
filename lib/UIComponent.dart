@@ -8,22 +8,22 @@ class UIComponent {
 
   static defaultFunction() {}
 
-  static Widget UIButton(Function onPressed) {
+  static Widget UIButton({required Function onPressed}) {
     return MaterialButton(
       onPressed: () => onPressed(),
-      color: Color(UIColors.Purple4),
+      color: Color(UIColors.Purple2),
     );
-  }
-
-  static Widget UIFAB(Function onPressed) {
-    return FloatingActionButton(onPressed: () => onPressed());
   }
 
   static Widget UITextField() {
     return TextField();
   }
 
-  static Widget UICard(Widget child) {
+  static Widget UICard({Widget? child}) {
     return Card(child: child);
+  }
+
+  static Widget UiText(String data) {
+    return Text(data);
   }
 }
