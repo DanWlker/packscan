@@ -98,17 +98,10 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             UIComponent.UIText("You have pushed the button this many times:"),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: UIComponent.UIButton(
-                onPressed: () => {},
-                child:
-                    UIComponent.UIText("hello", color: Color(UIColors.White5)),
-              ),
+            UIComponent.UIText('$_counter'),
+            UIComponent.UIButton(
+              onPressed: () => {},
+              child: UIComponent.UIText("hello", color: Color(UIColors.White5)),
             ),
             UIComponent.UICard(
                 child: Container(
