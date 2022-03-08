@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:group_buyz/UIColors.dart';
 import 'UIComponent.dart';
 
 void main() {
@@ -96,14 +97,26 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
+            UIComponent.UIText("You have pushed the button this many times:"),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
-            UIComponent.UIButton(onPressed: () {}),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: UIComponent.UIButton(
+                onPressed: () => {},
+                child:
+                    UIComponent.UIText("hello", color: Color(UIColors.White5)),
+              ),
+            ),
+            UIComponent.UICard(
+                child: Container(
+              height: 300,
+              width: 300,
+              alignment: Alignment.center,
+              child: UIComponent.UIIcon(Icons.folder_outlined, size: 50),
+            ))
           ],
         ),
       ),
