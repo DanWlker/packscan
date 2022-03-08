@@ -26,6 +26,7 @@ class UIComponent {
   //TODO: Very crude implementation, might need to revise
   static Widget UICard({Widget? child}) {
     return Card(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
       elevation: 0,
       child: child,
       color: Color(UIColors.Grey4),
@@ -33,10 +34,11 @@ class UIComponent {
   }
 
   //TODO: Very crude implementation assuming our default color is purple,may need revision
-  static Widget UIText(String data, {Color? color}) {
+  static Widget UIText(String data, {Color? color, double? fontSize}) {
     return Text(
       data,
       style: TextStyle(
+        fontSize: fontSize,
         color: color ?? Color(UIColors.Purple2),
         //TODO: May need to use google fonts plugin here, depending if import directly or use the module
         //fontFamily: "Poppins"
