@@ -40,8 +40,6 @@ class UIComponent {
       style: TextStyle(
         fontSize: fontSize,
         color: color ?? Color(UIColors.Purple2),
-        //TODO: May need to use google fonts plugin here, depending if import directly or use the module
-        //fontFamily: "Poppins"
       ),
     );
   }
